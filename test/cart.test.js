@@ -69,3 +69,9 @@ test("the result is a number", () => {
    const options = { vatRate: 0, freeShipFrom: 500000, shipFee: 0 };
    assert.equal(typeof cartTotal(items, options), "number");
 });
+
+test("a NaN price throws RangeError", () => {
+   const items = [{ name: "Product", price: Number.NaN, qty: 1 }];
+   const options = { vatRate: 0, freeShipFrom: 500000, shipFee: 30000 };
+   assert.throws(() => cartTotal(items, options), RangeError);
+});

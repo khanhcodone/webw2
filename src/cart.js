@@ -4,8 +4,8 @@ export function cartTotal(items, options) {
    }
 
    const subtotal = items.reduce((total, item) => {
-      if (item.price < 0) {
-         throw new RangeError("price must not be negative");
+      if (!Number.isFinite(item.price) || item.price < 0) {
+         throw new RangeError("price must be a non-negative number");
       }
 
       if (!Number.isInteger(item.qty) || item.qty <= 0) {
