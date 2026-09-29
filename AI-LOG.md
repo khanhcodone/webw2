@@ -131,6 +131,6 @@ explain it.
 - `npm run lint`: `lint: no problems found`.
 - `npm test`: 11 tests, 11 pass, 0 fail.
 - GitHub Actions on `main`: CI #1 (`cc4f182`) green, CI #2 (`6540ca1`) green.
-  This round of changes (NaN check, 11th test, `RULES.md` revision, and this
-  log entry) has not been pushed yet, so CI #3 has not run.
+  and CI #3 (0f18a27) green.
+- CI #3 covers the final round of changes: the NaN price validation, the 11th test, and the RULES.md revision. This final log update was made after CI #3 completed successfully.
   Runs: https://github.com/khanhcodone/webw2/actions
